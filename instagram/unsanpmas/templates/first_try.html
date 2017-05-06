@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,18 +33,18 @@
           </div>
           <input class="form-control" type="password" name="repeat password" placeholder="confirmar contraseña">
 
-          ¿tienes una cuenta? <a href="inicio-sesion.html">Entar</a><br>
+          ¿tienes una cuenta? <a href="{% url 'inicio' %}">Entar</a><br>
       </form>
         </div>
 <a href="https://www.apple.com/" i class="material-icons">explore
 
 <a href="https://play.google.com/store/apps?hl=es" i class="material-icons">android
       </div>
-      <a href="inicio-sesion.html" class="btn btn-primary">registrate</a>
+      <a href="{% url 'inicio' %}" class="btn btn-primary">registrate</a>
     </div>
   </div>
 </center>
-  <link rel="stylesheet" type="text/css" href="css/css_registro.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/css_registro.css' %}">
     <div>
 <center>
       <img src="imagenes/appstore.png" id="IMG1"><br>

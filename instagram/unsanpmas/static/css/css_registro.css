@@ -1,0 +1,17 @@
+#imagenes{
+  border-style: solid;
+  border-radius:50%;
+  float: left;
+  border-color:  rgb(207, 41, 79)
+}
+#IMG1{
+height:110px ;
+width: auto ;
+border-radius: 80%;
+float: center;
+}
+#IMG2{
+  height:80px;
+  width: auto;
+  border-radius: 30%;
+}
