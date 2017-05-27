@@ -17,16 +17,16 @@
       Registrate
     </div>
     <div class="card-block">
-      <form action="{% url 'crear_usuario' %}" method="POST">
+      <form action='{% url 'crear_usuario' %}' method="POST">
         {% csrf_token %}
         <div class="form-group">
           correo electronico:
           <div class="form-group">
-          <input class="form-control" type="text" name="firstname" placeholder="@outlock or @gmail">
+          <input class="form-control" type="text" name="email" placeholder="@outlock or @gmail">
           </div>
           <div class="fomr-control">
           Usuario:
-          <input class="form-control" type="text" name="lastname" placeholder="usuario">
+          <input class="form-control" type="text" name="name" placeholder="usuario">
           </div>
           <div class="fomr-control">
           contraseña:
@@ -35,15 +35,15 @@
           <input class="form-control" type="password" name="repeat_password" placeholder="confirmar contraseña">
 
           ¿tienes una cuenta? <a href="{% url 'inicio' %}">Entar</a><br>
-      </form>
-        </div>
-<a href="https://www.apple.com/" i class="material-icons">explore
 
-<a href="https://play.google.com/store/apps?hl=es" i class="material-icons">android
-      </div>
-      <a href="{% url 'inicio' %}" class="btn btn-primary">registrate</a>
-    </div>
+        </div>
+        <a href="https://www.apple.com/" i class="material-icons">explore </a>
+        <a href="https://play.google.com/store/apps?hl=es" i class="material-icons">android </a>
   </div>
+        <button class="btn btn-primary btn-block">registrate</button>
+      </form>
+    </div>
+      </div>
 </center>
   <link rel="stylesheet" type="text/css" href="{% static 'css/css_registro.css' %}">
     <div>
