@@ -1,25 +1,59 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title> un snap mas </title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-</head>
+  </head>
 <body>
 <center>
-  <ul class=" nav nav-pill nav-justified">
-<!--<nav aria-label="Page navigation">
+
+  <ul class="nav nav-fill">
+  <li class="nav-item">
+    <li class="nav-link active">
+    <a href="{% url 'cuenta' %}" i class="material-icons">account_box</a>
+  </li>
+  <li class="nav-item">
+    <a href="#" i class="material-icons">forum</a>
+  </li>
+  <li class="nav-item">
+    <a href="#" i class="material-icons">favorite</a>
+  </li>
+  <li class="nav-item">
+    <a a href="" i class="material-icons">explore</a>
+  </li>
+  <li class="nav-item">
+    <a href="{% url 'logout' %}" i class="material-icons">clear</a>
+  </li>
+</ul>
+
+
+<!--  <ul class=" nav nav-pill nav-justified">
+<nav aria-label="Page navigation">
     <ul class="pagination">
-      <li>-->
+      <li>
       <li><a href="{% url 'cuenta' %}" i class="material-icons">account_box</a></li>
       <li><a href="" i class="material-icons">explore</a></li>
       <li><a href="" i class="material-icons">forum</a></li>
       <li><a href="" i class="material-icons">favorite</a></li>
-      <li>
-        </a>
-      </li>
     </ul>
 </nav>
+</center>
+
+<form action='{% url 'logout' %}' method="POST">
+  {% csrf_token %}
+  <button class="btn btn-primary">deslogueate xd</button>
+</form>-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+-->
+  </body>
+</html>

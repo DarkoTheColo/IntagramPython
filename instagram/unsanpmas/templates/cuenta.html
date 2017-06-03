@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <title> registro </title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>
 <body>
@@ -24,14 +24,25 @@
   <li class="nav-item">
     <a class="nav-link" href="#">Followers</a>
   </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">algien dio megusta </a>
+      <a class="dropdown-item" href="#">otro alguien le dio megusta</a>
+      <a class="dropdown-item" href="#">otro otro alguien dio megusta</a>
+      <!--<div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a> -->
+    </div>
+  </li>
   </ul>
       <center>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/imagnes_cuenta.css' %}">
         <div class="card" style="width: 20rem;">
-          <img class="card-img-top" src="{% static 'media/imagnex.jpg' %}" alt="Card image cap">
+          <img class="card-img-top" src="{% static 'media/imagnex.jpg' %}" id="IMG1" alt="Card image cap">
           <div class="card-block">
-            <h4 class="card-title">Card title</h4>
+            <h4 class="card-title"> {{ user.username }} </h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-default">Editar Perfil</a>
           </div>
         </div>
 
@@ -51,3 +62,6 @@
       </center>-->
 
 </center>
+
+  </body>
+</html>

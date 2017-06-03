@@ -122,4 +122,4 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = 'registrar'
 LOGIN_REDIRECT_URL = 'pagina'
-LOGOUT_REDIRET_URL = 'index'
+LOGOUT_REDIRET_URL = 'registrar'

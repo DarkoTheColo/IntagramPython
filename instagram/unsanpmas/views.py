@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from unsanpmas.models import *
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def registrar(request):
@@ -8,7 +9,7 @@ def registrar(request):
 
 def crear_usuario( request ):
     _email= request.POST[ 'email' ]
-    _username= request.POST[ 'name' ]
+    _username= request.POST[ 'username' ]
     _password= request.POST[ 'password' ]
     _repeat_password= request.POST[ 'repeat_password' ]
 
@@ -23,15 +24,16 @@ def crear_usuario( request ):
         myUser.save()
         print (user)
         print (user.password)
-        return redirect( 'inicio' )
+        return redirect( 'login' )
     else:
-        return render( request,'first_try.html' )
+        return render( request,'login' )
 
 
-
-def inicio(request):
-    return render ( request, 'inicio_sesion2.html')
+@login_required
 def pagina(request):
     return render ( request, 'pagina_inicio2.html')
+
+
 def cuenta(request):
-    return render ( request, 'cuenta.html')
+    user = request.user
+    return render ( request, 'cuenta.html', { 'user' : user })
